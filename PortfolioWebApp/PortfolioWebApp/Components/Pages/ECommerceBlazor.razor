@@ -1,0 +1,177 @@
+﻿@page "/projects/yumblazor"
+
+<PageTitle>YumBlazor - Project</PageTitle>
+
+<div class="project-hero py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold mb-3">YumBlazor</h1>
+                <p class="lead mb-4">
+                    YumBlazor is a Blazor Server web app using EF Core and ASP.NET Core Identity for authentication and data access. 
+                    It integrates Stripe for payments and Azure Storage SDKs for blob/queue/table access, with repositories and services abstracting data and external integrations.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary">.NET 10</span>
+                    <span class="badge bg-primary">Blazor Server</span>
+                    <span class="badge bg-primary">EF Core</span>
+                    <span class="badge bg-primary">ASP.NET Core Identity</span>
+                    <span class="badge bg-primary">Stripe</span>
+                    <span class="badge bg-primary">Azure Storage</span>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="project-image-placeholder rounded shadow-sm">
+                    <span class="text-muted small">Project image coming soon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5">
+    <div class="container">
+        <h2 class="h4 mb-4">Overview</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><strong>Project Type:</strong> Blazor Web App (Server, interactive server components)</li>
+                    <li class="mb-2"><strong>Deployment:</strong> Azure + GitHub Actions</li>
+                    <li class="mb-2"><strong>Role:</strong> N/A</li>
+                    <li class="mb-2"><strong>Timeframe:</strong> N/A</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><strong>Database:</strong> SQL Server</li>
+                    <li class="mb-2"><strong>Storage:</strong> Azure Blob Storage (product images)</li>
+                    <li class="mb-2"><strong>Auth:</strong> ASP.NET Core Identity + external providers</li>
+                    <li class="mb-2"><strong>UI:</strong> Radzen.Blazor</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5 bg-light">
+    <div class="container">
+        <h2 class="h4 mb-4">Architecture</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h3 class="h6 text-uppercase text-muted">Style</h3>
+                <p class="mb-0">Layered (Components/Pages, Data, Repository, Services)</p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="h6 text-uppercase text-muted">Key Components</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>UI: Blazor components/pages</li>
+                    <li>Data: ApplicationDbContext + entities</li>
+                    <li>Repositories: `IOrderRepository`, `IShoppingCartRepository`</li>
+                    <li>Services: payment + blob storage</li>
+                </ul>
+            </div>
+            <div class="col-md-12">
+                <h3 class="h6 text-uppercase text-muted mt-3">Data Flow</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>UI → repositories/services → `ApplicationDbContext` → SQL Server</li>
+                    <li>UI → `PaymentService` → Stripe Checkout</li>
+                    <li>UI/services → Azure Storage clients → Blob container</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5">
+    <div class="container">
+        <h2 class="h4 mb-4">Tech Stack</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h3 class="h6 text-uppercase text-muted">Languages</h3>
+                <p class="mb-0">C#, Razor</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="h6 text-uppercase text-muted">Frameworks & Libraries</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>.NET 10</li>
+                    <li>Blazor Server</li>
+                    <li>ASP.NET Core Identity</li>
+                    <li>EF Core (SQL Server)</li>
+                    <li>Radzen.Blazor</li>
+                    <li>Stripe.net</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3 class="h6 text-uppercase text-muted">Azure Services</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>Azure Storage (Blobs/Queues/Tables)</li>
+                    <li>Managed Identity (`DefaultAzureCredential`)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5 bg-light">
+    <div class="container">
+        <h2 class="h4 mb-4">Security & Integrations</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h3 class="h6 text-uppercase text-muted">Security</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>ASP.NET Core Identity (cookies)</li>
+                    <li>User Secrets (`UserSecretsId`) + configuration</li>
+                    <li>HTTPS + antiforgery middleware</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3 class="h6 text-uppercase text-muted">Integrations</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>Stripe Checkout</li>
+                    <li>External auth: Facebook, Google, Microsoft</li>
+                    <li>Azure Storage</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5">
+    <div class="container">
+        <h2 class="h4 mb-4">Patterns & Practices</h2>
+        <ul class="list-unstyled mb-0">
+            <li class="mb-2"><strong>Patterns:</strong> Repository pattern, service layer</li>
+            <li class="mb-2"><strong>Practices:</strong> N/A</li>
+            <li class="mb-2"><strong>Testing:</strong> N/A</li>
+        </ul>
+    </div>
+</div>
+
+<div class="project-section py-5 bg-light">
+    <div class="container">
+        <h2 class="h4 mb-4">Links</h2>
+        <ul class="list-unstyled mb-0">
+            <li><strong><a href="https://github.com/Remigan98/Dotnet/tree/main/BlazorFundamentals/YumBlazor">Repo / Demo URL</a></strong></li>
+            <li><strong><a href="https://yumblazordemo.azurewebsites.net/">Live URL</a></strong></li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .project-hero {
+        background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+        color: white;
+    }
+
+    .project-image-placeholder {
+        height: 220px;
+        background-color: rgba(255, 255, 255, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-section h2 {
+        font-weight: 700;
+    }
+</style>
