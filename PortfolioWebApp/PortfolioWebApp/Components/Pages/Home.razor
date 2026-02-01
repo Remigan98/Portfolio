@@ -1,15 +1,17 @@
 ﻿@page "/"
 
-<PageTitle>Remigiusz Ganiec - Portfolio</PageTitle>
+@inject IStringLocalizer<SharedResource> Localizer
+
+<PageTitle>@Localizer["Name"] - Portfolio</PageTitle>
 
 <div class="hero-section py-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-4 text-center mb-4 mb-md-0">
-                <img src="/images/profile.jpg" alt="Remigiusz Ganiec" class="profile-photo img-fluid rounded-circle shadow-lg" />
+                <img src="/images/profile.jpg" alt="@Localizer["Name"]" class="profile-photo img-fluid rounded-circle shadow-lg" />
             </div>
             <div class="col-md-8">
-                <h1 class="display-4 fw-bold mb-3">Remigiusz Ganiec</h1>
+                <h1 class="display-4 fw-bold mb-3">@Localizer["Name"]</h1>
                 <h2 class="h4 text-muted mb-4">Technical Lead (.NET) | Software Engineering Manager</h2>
                 <p class="lead mb-4">
                     I strive to create modern, scalable, and secure IT systems based on .NET technology and the Azure platform. 
@@ -19,7 +21,7 @@
                 <div class="contact-info mb-4">
                     <p class="mb-2">
                         <i class="bi bi-envelope-fill me-2"></i>
-                        <a href="mailto:remekgc@gmail.com">remekgc@gmail.com</a>
+                        <a href="mailto:@Localizer["EmailAddress"]">@Localizer["EmailAddress"]</a>
                     </p>
                     <p class="mb-2">
                         <i class="bi bi-telephone-fill me-2"></i>
@@ -27,14 +29,14 @@
                     </p>
                     <p class="mb-2">
                         <i class="bi bi-geo-alt-fill me-2"></i>
-                        Lublin, Poland
+                        @Localizer["HomeAddress"]
                     </p>
                 </div>
                 <div class="d-flex gap-2 flex-wrap">
-                    <a href="/documents/CV_Remigiusz_Ganiec.pdf" target="_blank" class="btn btn-primary">
+                    <a href="@Localizer["CvLink"]" target="_blank" class="btn btn-primary">
                         <i class="bi bi-file-pdf me-2"></i>View CV
                     </a>
-                    <a href="/documents/CV_Remigiusz_Ganiec.pdf" download class="btn btn-outline-primary">
+                    <a href="@Localizer["CvLink"]" download class="btn btn-outline-primary">
                         <i class="bi bi-download me-2"></i>Download CV
                     </a>
                     <a href="https://www.udemy.com/user/remigiusz-ganiec/" target="_blank" class="btn btn-outline-secondary">
