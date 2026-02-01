@@ -1,0 +1,626 @@
+﻿@page "/projects/taskmaster-react"
+
+<PageTitle>TaskMaster - TypeScript Task Management | Portfolio</PageTitle>
+
+<div class="project-hero py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold mb-3">TaskMaster – TypeScript Task Management Application</h1>
+                <p class="lead mb-4">
+                    TaskMaster is a sophisticated task management application that demonstrates advanced TypeScript patterns and modern React development practices.
+                    Built with React 19, TypeScript 5.7, and TanStack Query, it provides a seamless user experience for managing daily tasks with real-time updates,
+                    intelligent state management, and type-safe form validation.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary">React 19</span>
+                    <span class="badge bg-primary">TypeScript 5.7</span>
+                    <span class="badge bg-primary">TanStack Query</span>
+                    <span class="badge bg-primary">Vite</span>
+                    <span class="badge bg-primary">shadcn/ui</span>
+                    <span class="badge bg-primary">Tailwind CSS</span>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="project-image-placeholder rounded shadow-sm">
+                    <img src="/images/taskMasterProfile.jpg" alt="TaskMaster Screenshot" class="img-fluid rounded" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <!-- Project Overview -->
+    <section class="mb-5">
+        <h2 class="section-title mb-4">Project Overview</h2>
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <p class="lead">
+                    TaskMaster is a sophisticated task management application that demonstrates advanced TypeScript patterns and modern React development practices. 
+                    Built with React 19, TypeScript 5.7, and TanStack Query, it provides a seamless user experience for managing daily tasks with real-time updates 
+                    and intelligent state management.
+                </p>
+                <p>
+                    The application features a clean, intuitive interface powered by shadcn/ui components and Tailwind CSS, offering users the ability to create, 
+                    update, and track tasks with different priority levels and statuses. The project showcases professional-grade code organization, type-safe 
+                    development, and modern React patterns including custom hooks, form validation with Zod, and optimistic UI updates.
+                </p>
+                <p class="mb-0">
+                    TaskMaster serves as an excellent reference implementation for developers learning advanced TypeScript and React concepts, demonstrating 
+                    best practices in component architecture, API integration, and state management with TanStack Query.
+                </p>
+                
+                <div class="row mt-4 g-4">
+                    <div class="col-md-6">
+                        <div class="info-box p-3 rounded bg-light">
+                            <h5 class="text-primary mb-3"><i class="bi bi-bullseye me-2"></i>Purpose</h5>
+                            <p class="mb-0">
+                                To provide a production-ready example of modern React and TypeScript development, demonstrating best practices in type safety, 
+                                state management, form handling, and API integration.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box p-3 rounded bg-light">
+                            <h5 class="text-primary mb-3"><i class="bi bi-people-fill me-2"></i>Target Audience</h5>
+                            <p class="mb-0">
+                                Professional developers, TypeScript learners, teams building task management features, and organizations seeking modern 
+                                React architecture patterns.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="mb-5">
+        <h2 class="section-title mb-4">Key Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 feature-card">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-clipboard-check text-primary"></i>
+                        </div>
+                        <h5 class="card-title text-primary mb-3">Task Creation with Form Validation</h5>
+                        <p class="card-text mb-3">
+                            Users can create new tasks with title, description, due date, priority level (low, normal, high), and status. 
+                            Real-time form validation ensures data integrity before submission.
+                        </p>
+                        <div class="tech-detail bg-light p-3 rounded">
+                            <small class="text-muted">
+                                <strong>Technical:</strong> Implemented with React Hook Form and Zod schema validation, providing type-safe 
+                                form handling with automatic error messages and field-level validation
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 feature-card">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-arrow-repeat text-primary"></i>
+                        </div>
+                        <h5 class="card-title text-primary mb-3">Real-Time Task Status Updates</h5>
+                        <p class="card-text mb-3">
+                            Tasks can be updated between three states: Todo, In Progress, and Completed. Status changes are reflected 
+                            immediately with optimistic UI updates while synchronizing with the backend.
+                        </p>
+                        <div class="tech-detail bg-light p-3 rounded">
+                            <small class="text-muted">
+                                <strong>Technical:</strong> Leverages TanStack Query's mutation system with automatic cache invalidation 
+                                and refetching to ensure UI consistency
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 feature-card">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-exclamation-triangle text-primary"></i>
+                        </div>
+                        <h5 class="card-title text-primary mb-3">Priority-Based Task Organization</h5>
+                        <p class="card-text mb-3">
+                            Tasks support three priority levels (low, normal, high) with visual color coding. High priority tasks are 
+                            highlighted in red, normal in blue, and low in green for quick identification.
+                        </p>
+                        <div class="tech-detail bg-light p-3 rounded">
+                            <small class="text-muted">
+                                <strong>Technical:</strong> Conditional rendering with Tailwind CSS utility classes based on task priority enum values
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 feature-card">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-calendar-date text-primary"></i>
+                        </div>
+                        <h5 class="card-title text-primary mb-3">Date Picker with Formatting</h5>
+                        <p class="card-text mb-3">
+                            Interactive calendar component for selecting task due dates with intelligent date formatting. Displays dates 
+                            in user-friendly format (e.g., 'Monday, 1 Feb 2026').
+                        </p>
+                        <div class="tech-detail bg-light p-3 rounded">
+                            <small class="text-muted">
+                                <strong>Technical:</strong> Uses React Day Picker with date-fns for internationalized date handling and formatting
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 feature-card">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-moon-stars text-primary"></i>
+                        </div>
+                        <h5 class="card-title text-primary mb-3">Dark Mode Support</h5>
+                        <p class="card-text mb-3">
+                            Full dark mode theme with carefully designed color palette using OKLCH color space for consistent visual 
+                            experience across light and dark themes.
+                        </p>
+                        <div class="tech-detail bg-light p-3 rounded">
+                            <small class="text-muted">
+                                <strong>Technical:</strong> CSS custom properties with Tailwind's dark mode variant, using modern OKLCH 
+                                color format for perceptually uniform colors
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 feature-card">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-shield-check text-primary"></i>
+                        </div>
+                        <h5 class="card-title text-primary mb-3">Type-Safe API Integration</h5>
+                        <p class="card-text mb-3">
+                            All API calls are fully typed with TypeScript interfaces, ensuring compile-time type checking and autocomplete 
+                            support throughout the application.
+                        </p>
+                        <div class="tech-detail bg-light p-3 rounded">
+                            <small class="text-muted">
+                                <strong>Technical:</strong> Generic Response interface with type parameters enables reusable, type-safe API 
+                                response handling
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="mb-5">
+        <h2 class="section-title mb-4">Technology Stack</h2>
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center tech-card">
+                    <div class="card-body p-4">
+                        <div class="tech-icon mb-3">
+                            <i class="bi bi-code-square display-4 text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Languages</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">TypeScript 5.7.2</li>
+                            <li class="mb-2">JavaScript (ES2020)</li>
+                            <li>CSS3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center tech-card">
+                    <div class="card-body p-4">
+                        <div class="tech-icon mb-3">
+                            <i class="bi bi-layers display-4 text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Frameworks</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">React 19.0.0</li>
+                            <li>React Router 7.2.0</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center tech-card">
+                    <div class="card-body p-4">
+                        <div class="tech-icon mb-3">
+                            <i class="bi bi-box-seam display-4 text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">UI Libraries</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">shadcn/ui</li>
+                            <li class="mb-2">Tailwind CSS 4.0.8</li>
+                            <li class="mb-2">Radix UI</li>
+                            <li>Lucide React</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center tech-card">
+                    <div class="card-body p-4">
+                        <div class="tech-icon mb-3">
+                            <i class="bi bi-database display-4 text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">State Management</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">TanStack Query 5.66.9</li>
+                            <li>React Hook Form 7.54.2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center tech-card">
+                    <div class="card-body p-4">
+                        <div class="tech-icon mb-3">
+                            <i class="bi bi-tools display-4 text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Build Tools</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">Vite 6.1.0</li>
+                            <li class="mb-2">TypeScript Compiler</li>
+                            <li>PostCSS 8.5.3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center tech-card">
+                    <div class="card-body p-4">
+                        <div class="tech-icon mb-3">
+                            <i class="bi bi-check2-square display-4 text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Validation</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">Zod 3.24.2</li>
+                            <li>@@hookform/resolvers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center tech-card">
+                    <div class="card-body p-4">
+                        <div class="tech-icon mb-3">
+                            <i class="bi bi-calendar3 display-4 text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Date Handling</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">date-fns 4.1.0</li>
+                            <li>React Day Picker 8.10.1</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center tech-card">
+                    <div class="card-body p-4">
+                        <div class="tech-icon mb-3">
+                            <i class="bi bi-bell display-4 text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">UI Feedback</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">Sonner 2.0.1</li>
+                            <li>React Query DevTools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture & Design -->
+    <section class="mb-5">
+        <h2 class="section-title mb-4">Architecture & Design Patterns</h2>
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <h5 class="text-primary mb-3">Component-Based Architecture with Custom Hooks Pattern</h5>
+                <p>
+                    Follows a feature-based folder structure with clear separation of concerns between UI components, business logic (hooks), 
+                    type definitions, and validation schemas.
+                </p>
+                
+                <div class="row mt-4 g-4">
+                    <div class="col-md-6">
+                        <div class="architecture-box p-3 rounded bg-light">
+                            <h6 class="fw-bold mb-3"><i class="bi bi-folder2-open me-2 text-primary"></i>Folder Structure</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="bi bi-folder me-2 text-primary"></i><code>/src/components/</code> - Reusable UI components</li>
+                                <li class="mb-2"><i class="bi bi-folder me-2 text-primary"></i><code>/src/components/ui/</code> - shadcn/ui base components (12+)</li>
+                                <li class="mb-2"><i class="bi bi-folder me-2 text-primary"></i><code>/src/hooks/</code> - Custom React hooks for API operations</li>
+                                <li class="mb-2"><i class="bi bi-folder me-2 text-primary"></i><code>/src/pages/</code> - Page-level components</li>
+                                <li class="mb-2"><i class="bi bi-folder me-2 text-primary"></i><code>/src/types/</code> - TypeScript interfaces</li>
+                                <li class="mb-2"><i class="bi bi-folder me-2 text-primary"></i><code>/src/schema/</code> - Zod validation schemas</li>
+                                <li><i class="bi bi-folder me-2 text-primary"></i><code>/src/lib/</code> - Utility functions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="architecture-box p-3 rounded bg-light">
+                            <h6 class="fw-bold mb-3"><i class="bi bi-diagram-3 me-2 text-primary"></i>Design Patterns Used</h6>
+                            <ul class="mb-0">
+                                <li class="mb-2">Custom Hooks Pattern - Encapsulates API logic</li>
+                                <li class="mb-2">Compound Component Pattern - shadcn/ui components</li>
+                                <li class="mb-2">Container/Presentational Pattern</li>
+                                <li class="mb-2">Form State Management - React Hook Form with Zod</li>
+                                <li class="mb-2">Optimistic UI Updates</li>
+                                <li>Type Guards - Runtime type checking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h6 class="fw-bold mb-3"><i class="bi bi-lightbulb me-2 text-primary"></i>Key Architectural Decisions</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="decision-box bg-light p-3 rounded border-start border-primary border-3">
+                                <strong class="text-primary">TanStack Query</strong>
+                                <p class="mb-0 small mt-2">Chosen for server state management - provides caching, automatic refetching, and optimistic updates</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="decision-box bg-light p-3 rounded border-start border-primary border-3">
+                                <strong class="text-primary">Zod Validation</strong>
+                                <p class="mb-0 small mt-2">Type-safe schema validation matching TypeScript interfaces</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="decision-box bg-light p-3 rounded border-start border-primary border-3">
+                                <strong class="text-primary">shadcn/ui Components</strong>
+                                <p class="mb-0 small mt-2">Provides full control with copy-paste components instead of locked-in libraries</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="decision-box bg-light p-3 rounded border-start border-primary border-3">
+                                <strong class="text-primary">Vite Build Tool</strong>
+                                <p class="mb-0 small mt-2">Faster development experience with sub-100ms HMR updates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Highlights -->
+    <section class="mb-5">
+        <h2 class="section-title mb-4">Technical Highlights</h2>
+        <div class="card shadow-sm border-0 bg-light">
+            <div class="card-body p-4">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="highlight-item d-flex align-items-start p-3 bg-white rounded">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1 fs-5"></i>
+                            <div>
+                                <strong>Type-Safe Development</strong>
+                                <p class="mb-0 small text-muted mt-1">Comprehensive TypeScript coverage with strict type checking and Zod runtime validation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="highlight-item d-flex align-items-start p-3 bg-white rounded">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1 fs-5"></i>
+                            <div>
+                                <strong>Advanced Type Guards</strong>
+                                <p class="mb-0 small text-muted mt-1">Custom type guard functions ensure runtime type safety when processing API responses</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="highlight-item d-flex align-items-start p-3 bg-white rounded">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1 fs-5"></i>
+                            <div>
+                                <strong>Optimistic UI Updates</strong>
+                                <p class="mb-0 small text-muted mt-1">Immediate UI feedback before API responses with automatic rollback on failure</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="highlight-item d-flex align-items-start p-3 bg-white rounded">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1 fs-5"></i>
+                            <div>
+                                <strong>Efficient Caching Strategy</strong>
+                                <p class="mb-0 small text-muted mt-1">TanStack Query manages server state with intelligent caching and automatic refetching</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="highlight-item d-flex align-items-start p-3 bg-white rounded">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1 fs-5"></i>
+                            <div>
+                                <strong>Modern React Patterns</strong>
+                                <p class="mb-0 small text-muted mt-1">Utilizes React 19 features, custom hooks, and compound components from Radix UI</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="highlight-item d-flex align-items-start p-3 bg-white rounded">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1 fs-5"></i>
+                            <div>
+                                <strong>Component Composition</strong>
+                                <p class="mb-0 small text-muted mt-1">shadcn/ui components provide accessible, customizable UI primitives</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges & Solutions -->
+    <section class="mb-5">
+        <h2 class="section-title mb-4">Challenges & Solutions</h2>
+        <div class="accordion accordion-flush" id="challengesAccordion">
+            <div class="accordion-item border rounded mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#challenge1">
+                        <i class="bi bi-lightbulb me-2 text-warning"></i>
+                        Type-Safe API Response Handling
+                    </button>
+                </h2>
+                <div id="challenge1" class="accordion-collapse collapse show" data-bs-parent="#challengesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Challenge:</strong> Ensuring runtime data matches expected TypeScript types from API responses.</p>
+                        <p><strong>Solution:</strong> Created a generic <code>IResponse&lt;T&gt;</code> interface that wraps all API responses with consistent structure. 
+                        Implemented custom type guard functions to validate runtime data matches expected types before rendering.</p>
+                        <div class="bg-light p-3 rounded">
+                            <code class="small d-block">
+                                data.data.every((item): item is ITask => '_id' in item && ...)
+                            </code>
+                            <p class="mb-0 mt-2 small">
+                                The type guard uses TypeScript's 'is' keyword to narrow types, ensuring type safety at runtime while maintaining compile-time type checking.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item border rounded mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#challenge2">
+                        <i class="bi bi-lightbulb me-2 text-warning"></i>
+                        Form Validation with Runtime Type Checking
+                    </button>
+                </h2>
+                <div id="challenge2" class="accordion-collapse collapse" data-bs-parent="#challengesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Challenge:</strong> Implementing robust form validation that works at both compile-time and runtime.</p>
+                        <p><strong>Solution:</strong> Integrated Zod schema validation with React Hook Form using @@hookform/resolvers. 
+                        Created CreateTaskSchema that mirrors the ITask interface, providing both runtime validation and TypeScript inference.</p>
+                        <div class="bg-light p-3 rounded">
+                            <code class="small d-block">
+                                z.infer&lt;typeof CreateTaskSchema&gt;
+                            </code>
+                            <p class="mb-0 mt-2 small">
+                                The zodResolver automatically connects validation errors to form fields, displaying user-friendly error messages and eliminating type duplication.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item border rounded mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#challenge3">
+                        <i class="bi bi-lightbulb me-2 text-warning"></i>
+                        Synchronizing Client and Server State
+                    </button>
+                </h2>
+                <div id="challenge3" class="accordion-collapse collapse" data-bs-parent="#challengesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Challenge:</strong> Keeping UI synchronized with backend data while providing instant user feedback.</p>
+                        <p><strong>Solution:</strong> Leveraged TanStack Query's cache invalidation system to automatically refetch data after mutations. 
+                        Implemented optimistic updates for immediate UI feedback while maintaining data consistency.</p>
+                        <div class="bg-light p-3 rounded">
+                            <code class="small d-block">
+                                queryClient.invalidateQueries({ refetchType: 'all' })
+                            </code>
+                            <p class="mb-0 mt-2 small">
+                                After each mutation (create/update), this ensures both active and inactive queries are refreshed, keeping task counters and task lists synchronized.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item border rounded">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#challenge4">
+                        <i class="bi bi-lightbulb me-2 text-warning"></i>
+                        Date Handling Across Timezones
+                    </button>
+                </h2>
+                <div id="challenge4" class="accordion-collapse collapse" data-bs-parent="#challengesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Challenge:</strong> Consistent date handling and formatting across different timezones and locales.</p>
+                        <p><strong>Solution:</strong> Standardized on ISO date strings for API communication and used date-fns for consistent formatting. 
+                        Implemented custom date formatting functions with Intl.DateTimeFormat for localized display.</p>
+                        <div class="bg-light p-3 rounded">
+                            <code class="small d-block">
+                                values.dueDate.toISOString()
+                            </code>
+                            <p class="mb-0 mt-2 small">
+                                Due dates are converted to ISO strings before API submission, with toLocaleDateString used for consistent visual presentation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Objectives -->
+    <section class="mb-5 bg-light p-4 rounded">
+        <h2 class="mb-4">Learning Objectives</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Advanced TypeScript patterns and type safety</li>
+                    <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>TanStack Query for server state management</li>
+                    <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Form handling with React Hook Form and Zod</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Modern React 19 features and patterns</li>
+                    <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Component composition with Radix UI/shadcn</li>
+                    <li class="mb-2"><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Tailwind CSS utility-first styling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </div>
+
+<style>
+    .bg-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: #f8f9fa;
+        color: #212529;
+    }
+
+    code {
+        background-color: #e9ecef;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 0.875em;
+    }
+</style>
