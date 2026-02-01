@@ -1,0 +1,92 @@
+﻿@page "/projects/shooter-assistant"
+
+<PageTitle>Shooter Assistant - Project</PageTitle>
+
+<div class="project-hero py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold mb-3">Shooter Assistant</h1>
+                <p class="lead mb-4">
+                    Shooter Assistant is a personal, work-in-progress extension of the iShot ecosystem. 
+                    It is planned as a modular monolith backend with a Blazor web app and a .NET MAUI desktop/mobile app for analytics and insights based on iShot system data.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-warning text-dark">Work in progress</span>
+                    <span class="badge bg-primary">Modular Monolith</span>
+                    <span class="badge bg-primary">Blazor</span>
+                    <span class="badge bg-primary">.NET MAUI</span>
+                    <span class="badge bg-primary">Azure</span>
+                    <span class="badge bg-primary">CI/CD</span>
+                    <span class="badge bg-primary">Testing</span>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="project-image-placeholder rounded shadow-sm">
+                    <span class="text-muted small">Project image coming soon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5">
+    <div class="container">
+        <h2 class="h4 mb-4">Concept</h2>
+        <p class="mb-0">
+            The goal is to provide detailed performance analytics, training insights, and reporting for iShot users. 
+            The solution is being designed to support both web and cross-platform desktop/mobile access while keeping domain modules isolated inside a single deployable backend.
+        </p>
+    </div>
+</div>
+
+<div class="project-section py-5 bg-light">
+    <div class="container">
+        <h2 class="h4 mb-4">Planned Architecture</h2>
+        <ul class="list-unstyled mb-0">
+            <li class="mb-2"><strong>Backend:</strong> Modular monolith with separate domain modules</li>
+            <li class="mb-2"><strong>Web:</strong> Blazor app for dashboards and administration</li>
+            <li class="mb-2"><strong>Desktop/Mobile:</strong> .NET MAUI app for analytics and on-site usage</li>
+            <li class="mb-2"><strong>Data:</strong> Analytics layer fed by iShot system telemetry</li>
+        </ul>
+    </div>
+</div>
+
+<div class="project-section py-5">
+    <div class="container">
+        <h2 class="h4 mb-4">Quality & Delivery</h2>
+        <ul class="list-unstyled mb-0">
+            <li class="mb-2"><strong>Testing:</strong> Unit, integration, and end-to-end tests planned</li>
+            <li class="mb-2"><strong>CI/CD:</strong> Automated build, test, and deploy pipeline</li>
+            <li class="mb-2"><strong>Hosting:</strong> Azure services and managed hosting</li>
+        </ul>
+    </div>
+</div>
+
+<div class="project-section py-5 bg-light">
+    <div class="container">
+        <h2 class="h4 mb-4">Status</h2>
+        <p class="mb-0">
+            Work in progress. Features, tech stack, and integrations will be finalized and added once the first working version is ready.
+        </p>
+    </div>
+</div>
+
+<style>
+    .project-hero {
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        color: white;
+    }
+
+    .project-image-placeholder {
+        height: 220px;
+        background-color: rgba(255, 255, 255, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-section h2 {
+        font-weight: 700;
+    }
+</style>

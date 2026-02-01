@@ -1,0 +1,185 @@
+﻿@page "/projects/restaurantapi"
+
+<PageTitle>RestaurantAPI - Project</PageTitle>
+
+<div class="project-hero py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold mb-3">RestaurantAPI</h1>
+                <p class="lead mb-4">
+                    This project is an ASP.NET Core REST API for managing restaurants, dishes, and user accounts. 
+                    It uses EF Core with SQL Server, JWT auth, FluentValidation, and Swagger for API exploration. 
+                    The API includes CRUD operations, pagination, sorting, and custom authorization policies.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary">ASP.NET Core</span>
+                    <span class="badge bg-primary">EF Core</span>
+                    <span class="badge bg-primary">JWT</span>
+                    <span class="badge bg-primary">FluentValidation</span>
+                    <span class="badge bg-primary">Swagger</span>
+                    <span class="badge bg-primary">SQL Server</span>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="project-image-placeholder rounded shadow-sm">
+                    <img src="/images/restaurantapiProfile.png" alt="RestaurantAPI Screenshot" class="img-fluid rounded" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5">
+    <div class="container">
+        <h2 class="h4 mb-4">Overview</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><strong>Project Type:</strong> ASP.NET Core REST API</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><strong>Database:</strong> SQL Server</li>
+                    <li class="mb-2"><strong>Logging:</strong> NLog</li>
+                    <li class="mb-2"><strong>Docs:</strong> Swagger</li>
+                    <li class="mb-2"><strong>Auth:</strong> JWT Bearer + policies</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5 bg-light">
+    <div class="container">
+        <h2 class="h4 mb-4">Goals</h2>
+        <ul class="list-unstyled mb-0">
+            <li class="mb-2">Provide restaurant and dish management endpoints.</li>
+            <li class="mb-2">Support user registration and JWT login.</li>
+            <li class="mb-2">Enforce validation, authorization, and error handling.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="project-section py-5">
+    <div class="container">
+        <h2 class="h4 mb-4">Architecture</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h3 class="h6 text-uppercase text-muted">Style</h3>
+                <p class="mb-0">Layered (Controllers, Services, Entities)</p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="h6 text-uppercase text-muted">Key Components</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>Controllers, Services, DbContext</li>
+                    <li>Middleware, Validators</li>
+                    <li>Authorization handlers</li>
+                </ul>
+            </div>
+            <div class="col-md-12">
+                <h3 class="h6 text-uppercase text-muted mt-3">Data Flow</h3>
+                <p class="mb-0">Controllers → Services → EF Core `DbContext` → SQL Server</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5 bg-light">
+    <div class="container">
+        <h2 class="h4 mb-4">API Design</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h3 class="h6 text-uppercase text-muted">Endpoints</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>`api/restaurant`</li>
+                    <li>`api/restaurant/{id}`</li>
+                    <li>`api/restaurant/{restaurantId}/dish`</li>
+                    <li>`api/account/register`</li>
+                    <li>`api/account/login`</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3 class="h6 text-uppercase text-muted">Behavior</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>Validation: FluentValidation + action filter</li>
+                    <li>Pagination: `RestaurantQuery` paging, sorting, search</li>
+                    <li>Error handling: centralized middleware with JSON errors</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5">
+    <div class="container">
+        <h2 class="h4 mb-4">Patterns & Practices</h2>
+        <ul class="list-unstyled mb-0">
+            <li class="mb-2"><strong>Patterns:</strong> Dependency Injection, middleware</li>
+            <li class="mb-2"><strong>Practices:</strong> SOLID (service interfaces, DI)</li>
+            <li class="mb-2"><strong>Testing:</strong> N/A</li>
+        </ul>
+    </div>
+</div>
+
+<div class="project-section py-5 bg-light">
+    <div class="container">
+        <h2 class="h4 mb-4">Security & Performance</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h3 class="h6 text-uppercase text-muted">Security</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>JWT Bearer + role-based and policy-based auth</li>
+                    <li>Password hashing via `IPasswordHasher`</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3 class="h6 text-uppercase text-muted">Performance</h3>
+                <ul class="list-unstyled mb-0">
+                    <li>Response caching</li>
+                    <li>Request timing middleware</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-section py-5">
+    <div class="container">
+        <h2 class="h4 mb-4">Links</h2>
+        <ul class="list-unstyled mb-0">
+            <li>
+                <strong>Repo / Demo URL:</strong>
+                <a href="https://github.com/Remigan98/Dotnet/tree/main/AspNet%20core%20REST%20Web%20API/RestaurantAPI" target="_blank" rel="noopener noreferrer">
+                    GitHub Repository
+                </a>
+            </li>
+            <li>
+                <strong>Live URL:</strong>
+                <a href="https://restaurantapi-hhaxf9erg4ffhfcr.westeurope-01.azurewebsites.net/swagger/index.html" target="_blank" rel="noopener noreferrer">
+                    Swagger UI
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .project-hero {
+        background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);
+        color: white;
+    }
+
+    .project-image-placeholder {
+        height: 220px;
+        background-color: rgba(255, 255, 255, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-section h2 {
+        font-weight: 700;
+    }
+</style>
